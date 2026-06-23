@@ -22,7 +22,7 @@ API_URL = "https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions"
 MODEL = MODEL
 
 # 公共背景（所有需求共享）
-BACKGROUND = "【业务背景】当前BCP的登录用户名与密码仅支持设定一组，无法让用户按照不同区域进行设定。"
+BACKGROUND = "【业务背景】当前平台的登录用户名与密码仅支持设定一组，无法让用户按照不同区域进行设定。"
 
 # CSV 文件路径（需求点列表）
 CSV_FILE = "requirements.csv"
