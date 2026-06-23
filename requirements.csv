@@ -1,0 +1,8 @@
+point
+自动展示Authority Management添加的Area（一个Area有多台电脑也只会展示一个Area在此），列表按照Area名称A-Z顺序排序，需要分页展示（每页15条数据）；
+每个Area默认用户名为admin+区域英文简称（例如：A08地点的默认用户名为adminA08），系统自动生成一个10位密码（至少包括一个大写字母、一个小写字母、一个特殊符号，其他像是数字之类的就随机即可），当前需要默认的Area参见附件Area List；
+点击Edit按钮可设定登录用户名与重新生成密码：Username登录名，必填，支持输入1-20个字符（区分大小写的英文字母、数字、符号），清空文本框时在文本框内灰字展示"1 to 20 characters"，当已输入20个字符时将无法继续输入；Re-generate Password重新生成密码按钮，点击后废弃当前密码，重新按照需求点2的规则生成一个新密码，操作成功后提示Success；Password密码，不直接展示明文，展示为********，支持Mouseover查看；
+右上角新增Re-generate All Passwords按钮，点击后将会批量对所有Area进行重新生成密码，操作成功后提示Success；
+右上角新增Export按钮，点击后将列表信息导出为Excel文件（文件内格式详见附件导出文件样本），文件名命名为：BCP User Management Info_<导出时间：yyyymmddhhmmss>.xlsx，例如：BCP User Management Info_20260120154030.xlsx；
+设定完成后，参考先前的数据同步方式将登录用户名与密码同步至对应Area的电脑上，用户登录时将进行登录用户名与密码校验，校验通过后方可访问BCP中的内容；
+右上角新增Print Memo按钮，点击按钮弹窗中显示所有Area（默认不选中任何Area），支持单选或多选Area进行打印；

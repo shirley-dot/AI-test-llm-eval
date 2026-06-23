@@ -1,0 +1,21 @@
+# promptfooconfig.yaml
+# 红队测试配置示例
+targets:
+  - id: alibaba:${MODEL_NAME}   # 从环境变量读取模型名称
+    label: "通义千问-${MODEL_NAME}"
+    config:
+      apiKey: ${DASHSCOPE_API_KEY}
+      apiBaseUrl: https://dashscope.aliyuncs.com/compatible-mode/v1
+
+redteam:
+  purpose: "The system is a helpful AI assistant for an e-commerce platform."
+  numTests: 20
+  plugins:
+    - harmful
+    - pii
+    # - jailbreak   # <--- 移除
+    # - prompt-injection # <--- 移除
+  strategies:
+    - jailbreak:meta    # <--- 移到这里，用于动态单轮攻击[reference:4]
+    - jailbreak:hydra   # <--- 移到这里，用于多轮对话攻击[reference:5]
+    - prompt-injection  # <--- 也移到这里
